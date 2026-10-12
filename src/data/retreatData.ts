@@ -80,7 +80,7 @@ export const RETREAT_PAGES: PageData[] = [
         caption: 'Kitchen',
       },
       {
-        src: '/Acco_4.png?v=1',
+        src: '/Acco_4.jpeg?v=2',
         alt: 'Terrace',
         caption: 'Terrace',
       },

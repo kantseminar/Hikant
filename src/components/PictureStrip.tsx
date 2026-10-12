@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { PageData, PagePicture } from '../data/retreatData';
+import { PageData, PagePicture, RETREAT_PAGES } from '../data/retreatData';
 import { X, ChevronLeft, ChevronRight, ZoomIn } from 'lucide-react';
 
 interface PictureStripProps {
@@ -15,6 +15,22 @@ const resolveImageUrl = (src: string) => {
 
 export const PictureStrip: React.FC<PictureStripProps> = ({ page }) => {
   const [activeModalIndex, setActiveModalIndex] = useState<number | null>(null);
+
+  // Pre-cache other pages' pictures during idle browser time
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      RETREAT_PAGES.forEach((p) => {
+        if (p.id !== page.id) {
+          p.pictures.forEach((pic) => {
+            const img = new Image();
+            img.src = resolveImageUrl(pic.src);
+          });
+        }
+      });
+    }, 1200);
+
+    return () => clearTimeout(timer);
+  }, [page.id]);
 
   // Keyboard navigation for enlarged modal
   useEffect(() => {
@@ -67,6 +83,8 @@ export const PictureStrip: React.FC<PictureStripProps> = ({ page }) => {
                   alt={pic.alt}
                   className="w-full h-full object-cover object-center transform transition-transform duration-300 ease-out group-hover:scale-110"
                   loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
                 />
 
                 {/* Mouse-over indicator overlay */}
