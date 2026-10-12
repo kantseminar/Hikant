@@ -6,6 +6,13 @@ interface PictureStripProps {
   page: PageData;
 }
 
+const resolveImageUrl = (src: string) => {
+  if (src.startsWith('http://') || src.startsWith('https://')) return src;
+  const base = import.meta.env.BASE_URL || './';
+  const cleanSrc = src.startsWith('/') ? src.slice(1) : src;
+  return base.endsWith('/') ? `${base}${cleanSrc}` : `${base}/${cleanSrc}`;
+};
+
 export const PictureStrip: React.FC<PictureStripProps> = ({ page }) => {
   const [activeModalIndex, setActiveModalIndex] = useState<number | null>(null);
 
@@ -56,7 +63,7 @@ export const PictureStrip: React.FC<PictureStripProps> = ({ page }) => {
               >
                 {/* Image with mouse-over smooth zoom effect */}
                 <img
-                  src={pic.src}
+                  src={resolveImageUrl(pic.src)}
                   alt={pic.alt}
                   className="w-full h-full object-cover object-center transform transition-transform duration-300 ease-out group-hover:scale-110"
                   loading="eager"
@@ -105,7 +112,7 @@ export const PictureStrip: React.FC<PictureStripProps> = ({ page }) => {
             {/* Enlarged Image display */}
             <div className="relative w-full max-h-[75vh] flex items-center justify-center overflow-hidden bg-black/40">
               <img
-                src={activePicture.src}
+                src={resolveImageUrl(activePicture.src)}
                 alt={activePicture.alt}
                 className="max-h-[75vh] max-w-full w-auto h-auto object-contain shadow-2xl transition-all duration-200"
               />
@@ -137,8 +144,8 @@ export const PictureStrip: React.FC<PictureStripProps> = ({ page }) => {
               </button>
             </div>
 
-            {/* Caption underneath enlarged picture */}
-            {activePicture.caption && (
+            {/* Caption underneath enlarged picture (strictly only for accommodation) */}
+            {(page.id === 'accommodation' || page.id === 'accomodations') && activePicture.caption && (
               <p className="text-sm text-white/80 font-serif pt-3 text-center px-4 max-w-2xl">
                 {activePicture.caption}
               </p>

@@ -26,6 +26,18 @@ export const HomeView: React.FC = () => {
         <p>
           <HiKantText /> is intended primarily for graduate students and early postdocs, with the hope of building a community of scholars. The goal is to leave not only with new ideas about Kant, but also with new intellectual connections and new friendships that will last well beyond the event.
         </p>
+
+        <div className="pt-4 space-y-3">
+          <p>
+            <HiKantText /> is organized by:
+          </p>
+          <ul className="list-disc pl-6 space-y-1.5 text-gray-800">
+            <li>Serena Feloj (University of Pavia)</li>
+            <li>Luigi Filieri (Scuola Normale Superiore, Pisa)</li>
+            <li>Gabriele Gava (University of Turin)</li>
+            <li>João Lemos (University of Turin)</li>
+          </ul>
+        </div>
       </div>
     </article>
   );

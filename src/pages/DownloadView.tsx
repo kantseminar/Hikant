@@ -15,17 +15,17 @@ export const DownloadView: React.FC = () => {
   };
 
   const handleDownloadOverview = () => {
-    const content = `HIKANT - PHILOSOPHICAL RETREAT IN THE ALPS
+    const content = `hiKant - PHILOSOPHICAL RETREAT IN THE ALPS
 Dates: September 6 to September 9, 2027
 Location: Borgata Superiore, Marmora, Val Maira (CN), Italy
 
-HIKANT aims to bring together scholars working on Kant for reading, discussing, and thinking about Kant together in the mountains of the beautiful Maira Valley.
+hiKant aims to bring together scholars working on Kant for reading, discussing, and thinking about Kant together in the mountains of the beautiful Maira Valley.
 
 Over a few days, we will read and discuss a text by Kant in an informal setting, combining philosophical conversation with time outdoors, shared meals, and hikes in the surrounding mountains.
 
 The aim is not only to study Kant, but also to experiment with a collaborative and non-competitive way of doing philosophy. The point will not be to impress others with your latest paper, but to think through ideas together, test them in conversation, and help one another make them clearer.
 
-HIKANT is intended primarily for graduate students and early postdocs, with the hope of building a community of scholars.
+hiKant is intended primarily for graduate students and early postdocs, with the hope of building a community of scholars.
 
 LOCATION
 Borgata Superiore, Marmora, in the upper Maira Valley, in a former Benedictine monastery set at around 1,580 meters above sea level. Home to Padre Sergio De Piccoli's library (~62,500 volumes), cared for by the association Luoghi di Passaggio.
@@ -35,7 +35,7 @@ Simple and communal mountain setting in the monastery: four shared rooms with ni
 
 PROGRAM (2027 EDITION)
 - September 6: Meeting in Turin and travel to Marmora.
-- September 7-8: HIKANT core activities, including reading and discussion sessions and one hike.
+- September 7-8: hiKant core activities, including reading and discussion sessions and one hike.
 - September 9: Travel back to Turin.
 
 COSTS
@@ -45,13 +45,13 @@ COSTS
 - Contribution to food expenses (shared grocery purchase).
 
 CONTACT
-Laura Altoè (laura.altoe@gmail.com)
+Email: hikant.seminar@gmail.com
 `;
-    downloadTextFile('HIKANT_Retreat_Overview.txt', content);
+    downloadTextFile('hiKant_Retreat_Overview.txt', content);
   };
 
   const handleDownloadGear = () => {
-    const content = `EQUIPMENT FOR THE HIKE - HIKANT 2027
+    const content = `EQUIPMENT FOR THE HIKE - hiKant 2027
 
 For the planned hike, you should have the following equipment:
 
@@ -63,18 +63,15 @@ For the planned hike, you should have the following equipment:
 • Sunglasses, sunscreen, and a sun hat.
 • A spare T-shirt, underwear, and socks, particularly useful if you get wet or sweaty.
 `;
-    downloadTextFile('HIKANT_Equipment_Checklist.txt', content);
+    downloadTextFile('hiKant_Equipment_Checklist.txt', content);
   };
 
   return (
     <article className="max-w-3xl mx-auto space-y-8 text-gray-900">
-      <header className="space-y-3">
+      <header className="pb-1">
         <h1 className="text-3xl sm:text-4xl font-serif font-normal text-black tracking-tight">
           Download
         </h1>
-        <p className="text-lg sm:text-xl text-gray-700 font-serif leading-relaxed">
-          Retreat information and materials
-        </p>
       </header>
 
       <div className="space-y-6 text-base sm:text-lg leading-relaxed text-gray-800">

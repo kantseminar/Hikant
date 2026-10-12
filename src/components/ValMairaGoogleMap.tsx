@@ -14,7 +14,7 @@ const LANDMARKS: LandmarkPoint[] = [
   {
     title: 'Borgata Superiore, Marmora',
     altitude: '1,580 m',
-    desc: 'HiKANT Retreat Venue · Padre Sergio’s Former Monastery & Library',
+    desc: 'hiKant Retreat Venue · Padre Sergio’s Former Monastery & Library',
     lat: 44.4583,
     lng: 7.0933,
     isMain: true,

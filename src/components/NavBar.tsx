@@ -15,7 +15,7 @@ export const NavBar: React.FC<NavBarProps> = ({ activePageId, onSelectPage }) =>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Bar with the pages name always visible, centered symmetrically under the logo */}
         <div className="flex items-center justify-start sm:justify-center space-x-6 sm:space-x-8 overflow-x-auto py-3 no-scrollbar">
-          {RETREAT_PAGES.map((page: PageData) => {
+          {RETREAT_PAGES.filter((page: PageData) => !page.hidden).map((page: PageData) => {
             const isActive = activePageId === page.id;
             return (
               <button

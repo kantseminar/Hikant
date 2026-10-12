@@ -1,16 +1,14 @@
 import React from 'react';
 import { HiKantText } from '../components/HiKantTypography';
+import { ValMairaGoogleMap } from '../components/ValMairaGoogleMap';
 
 export const LocationView: React.FC = () => {
   return (
     <article className="max-w-3xl mx-auto space-y-8 text-gray-900">
-      <header className="space-y-3">
+      <header className="pb-1">
         <h1 className="text-3xl sm:text-4xl font-serif font-normal text-black tracking-tight">
           Location
         </h1>
-        <p className="text-lg sm:text-xl text-gray-700 font-serif leading-relaxed">
-          Padre Sergio’s former monastery in Borgata Superiore, Marmora
-        </p>
       </header>
 
       <div className="space-y-6 text-base sm:text-lg leading-relaxed text-gray-800">
@@ -26,6 +24,9 @@ export const LocationView: React.FC = () => {
           Surrounded by the mountains and hiking trails of the Maira Valley, Padre Sergio’s former Monastery provides an ideal setting for <HiKantText />. Its indoor and outdoor spaces offer different places for reading, discussion, and informal conversation with exceptional views of the surrounding landscape.
         </p>
       </div>
+
+      {/* Integrated Google Maps on Earth View */}
+      <ValMairaGoogleMap />
     </article>
   );
 };

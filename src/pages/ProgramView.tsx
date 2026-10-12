@@ -4,13 +4,10 @@ import { HiKantText } from '../components/HiKantTypography';
 export const ProgramView: React.FC = () => {
   return (
     <article className="max-w-3xl mx-auto space-y-8 text-gray-900">
-      <header className="space-y-3">
+      <header className="pb-1">
         <h1 className="text-3xl sm:text-4xl font-serif font-normal text-black tracking-tight">
           Program
         </h1>
-        <p className="text-lg sm:text-xl text-gray-700 font-serif leading-relaxed">
-          Program of the 2027 Edition
-        </p>
       </header>
 
       <div className="space-y-6 text-base sm:text-lg leading-relaxed text-gray-800">

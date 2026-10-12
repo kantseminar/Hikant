@@ -9,6 +9,7 @@ export interface PageData {
   name: string;
   navTitle: string;
   pictures: PagePicture[];
+  hidden?: boolean;
 }
 
 export const RETREAT_PAGES: PageData[] = [
@@ -18,51 +19,20 @@ export const RETREAT_PAGES: PageData[] = [
     navTitle: 'Home',
     pictures: [
       {
-        src: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=85',
-        alt: 'Alpine mountain peaks in morning mist',
-        caption: 'The Cottian Alps — High elevation serenity for contemplation',
+        src: '/home_scree_mountain.jpg?v=3',
+        alt: 'Val Maira alpine mountain landscape',
       },
       {
-        src: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1400&q=85',
-        alt: 'High elevation Cottian Alps ridge and green slopes',
-        caption: 'Val Maira ridges — Open mountain horizons above Marmora',
+        src: '/home_alpine_trail.jpg?v=2',
+        alt: 'Percorsi Occitani hiking trail along rocky mountain slopes (IMG_1308)',
       },
       {
-        src: 'https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=1400&q=85',
-        alt: 'Hikers in dialogue along an alpine path',
-        caption: 'Collaborative inquiry — Walking and conversing in nature',
+        src: '/home_monastery_library.jpg?v=2',
+        alt: 'Padre Sergio’s authentic monastic library in Borgata Superiore',
       },
       {
-        src: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1400&q=85',
-        alt: 'Monastic reading room and books',
-        caption: 'Shared study — Close reading of Kant texts in fellowship',
-      },
-    ],
-  },
-  {
-    id: 'val-maira',
-    name: 'Val Maira',
-    navTitle: 'Val Maira',
-    pictures: [
-      {
-        src: '/val_maira_rocca_la_meja.jpg',
-        alt: 'Rocca la Meja (2,831 m) in Val Maira',
-        caption: 'Rocca la Meja (2,831 m) — Iconic limestone tower and highland plateau of Val Maira',
-      },
-      {
-        src: '/val_maira_marmora.png',
-        alt: 'Panorama of Marmora and mountain hamlets in Val Maira',
-        caption: 'Marmora (1,580 m) — The mountain commune and valleys hosting Borgata Superiore',
-      },
-      {
-        src: '/val_maira_chersogno.jpg',
-        alt: 'Monte Chersogno (3,026 m) in upper Val Maira',
-        caption: 'Monte Chersogno (3,026 m) — The highest mountain summit of upper Val Maira',
-      },
-      {
-        src: '/val_maira_valley.jpg',
-        alt: 'Pristine landscape of Val Maira, Piedmont',
-        caption: 'Val Maira (CN) — Preserved wilderness and silent alpine paths in the Cottian Alps',
+        src: '/home_marmora_village.jpg?v=2',
+        alt: 'Borgata Superiore, Marmora church bell tower and valley ridge (IMG_1348)',
       },
     ],
   },
@@ -72,51 +42,47 @@ export const RETREAT_PAGES: PageData[] = [
     navTitle: 'Location',
     pictures: [
       {
-        src: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1400&q=85',
-        alt: 'Monastic library shelves and study tables',
-        caption: 'Padre Sergio’s Library — Preserving thousands of volumes',
+        src: '/Location_1.jpeg?v=1',
+        alt: 'Location — Padre Sergio’s former monastery in Borgata Superiore, Marmora',
       },
       {
-        src: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1400&q=85',
-        alt: 'Monastery stone architecture in Borgata Superiore',
-        caption: 'Borgata Superiore (1,580 m) — Historic stone monastery hamlet',
+        src: '/Location_2.jpeg?v=1',
+        alt: 'Location — Monastery indoor and outdoor spaces',
       },
       {
-        src: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=1400&q=85',
-        alt: 'Books, notebooks and quiet reading space',
-        caption: 'Study tables — Spaces for reading, reflection, and exchange',
+        src: '/Location_3.jpeg?v=1',
+        alt: 'Location — Library and study environment',
       },
       {
-        src: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1400&q=85',
-        alt: 'Monastery terrace overlooking the valley',
-        caption: 'Monastery grounds cared for by Associazione Luoghi di Passaggio',
+        src: '/Location_4.jpeg?v=1',
+        alt: 'Location — Panoramic mountain views from the monastery',
       },
     ],
   },
   {
-    id: 'accomodations',
-    name: 'Accomodations',
-    navTitle: 'Accomodations',
+    id: 'accommodation',
+    name: 'Accommodation',
+    navTitle: 'Accommodation',
     pictures: [
       {
-        src: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1400&q=85',
-        alt: 'Warm wooden mountain refuge interior',
-        caption: 'Communal mountain lodge — Simple and welcoming atmosphere',
+        src: '/Acco_1.jpg?v=1',
+        alt: 'Triple room',
+        caption: 'Triple room',
       },
       {
-        src: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=85',
-        alt: 'Communal wooden dining table for shared meals',
-        caption: 'The refectory table — Shared meals prepared collectively',
+        src: '/Acco_2.jpeg?v=1',
+        alt: 'Double room',
+        caption: 'Double room',
       },
       {
-        src: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1400&q=85',
-        alt: 'Simple rustic shared bedrooms at the monastery',
-        caption: 'Monastery bedrooms — 4 shared rooms with 9 beds in total',
+        src: '/Acco_3.jpeg?v=1',
+        alt: 'Kitchen',
+        caption: 'Kitchen',
       },
       {
-        src: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=85',
-        alt: 'Morning light in the mountain valley',
-        caption: 'Mountain mornings — Peaceful dawn above the Marmora valley',
+        src: '/Acco_4.png?v=1',
+        alt: 'Terrace',
+        caption: 'Terrace',
       },
     ],
   },
@@ -126,51 +92,66 @@ export const RETREAT_PAGES: PageData[] = [
     navTitle: 'Program',
     pictures: [
       {
-        src: 'https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1400&q=85',
-        alt: 'Colloquium group seated together in discussion',
-        caption: 'Collaborative seminars — Paragraph-by-paragraph text reading',
+        src: '/Program_1.jpg?v=1',
+        alt: 'Program — Meeting and departure to Marmora',
       },
       {
-        src: 'https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=1400&q=85',
-        alt: 'Mountain hike on the high alpine trails',
-        caption: 'The Alpine hike — Informal philosophical discourse on the move',
+        src: '/Program_2.jpg?v=1',
+        alt: 'Program — Philosophical reading and discussion sessions',
       },
       {
-        src: 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1400&q=85',
-        alt: 'Philosophy books and reading notes',
-        caption: 'Kant text study — Testing and clarifying arguments together',
+        src: '/Program_3.jpeg?v=1',
+        alt: 'Program — The alpine hike in Val Maira',
       },
       {
-        src: 'https://images.unsplash.com/photo-1501555088652-021faa106b9b?auto=format&fit=crop&w=1400&q=85',
-        alt: 'Summit overlook and rest',
-        caption: 'September 6–9, 2027 — A shared 4-day intellectual journey',
+        src: '/Program_4.jpeg?v=1',
+        alt: 'Program — Community, reflection and conclusion',
       },
     ],
   },
   {
-    id: 'practical',
-    name: 'Practical',
-    navTitle: 'Practical',
+    id: 'costs',
+    name: 'Costs',
+    navTitle: 'Costs',
     pictures: [
       {
-        src: '/hiking_boots.jpg',
-        alt: 'Hiking shoes and boots with a good, non-slip sole',
-        caption: 'Footwear — Sturdy hiking boots with non-slip sole and mountain grip',
+        src: '/Cost_1.jpeg?v=1',
+        alt: 'Costs — Shared journey and transport arrangements',
       },
       {
-        src: '/water_bottle.jpg',
-        alt: 'Stainless steel water bottle for mountain hiking hydration',
-        caption: 'Hydration — Water bottle with enough water for several hours on the trail',
+        src: '/Cost_2.jpeg?v=1',
+        alt: 'Costs — Shared meals and food preparation',
       },
       {
-        src: '/minibus_travel.jpg',
-        alt: 'Participants travelling together in a passenger minibus',
-        caption: 'Shared travel — Collective minibus transport organized from Turin to Marmora',
+        src: '/Cost_3.jpeg?v=1',
+        alt: 'Costs — Accommodation at Padre Sergio’s former monastery',
       },
       {
-        src: '/groceries_bags.jpg',
-        alt: 'Filled reusable and paper grocery bags with fresh vegetables and food',
-        caption: 'Communal food — Wholesome groceries bought and prepared together by participants',
+        src: '/Cost_4.jpeg?v=1',
+        alt: 'Costs — Association membership and cultural spaces',
+      },
+    ],
+  },
+  {
+    id: 'equipment',
+    name: 'Equipment',
+    navTitle: 'Equipment',
+    pictures: [
+      {
+        src: '/equi_1.jpeg?v=1',
+        alt: 'Equipment — Sturdy mountain hiking footwear',
+      },
+      {
+        src: '/equi_2.jpeg?v=1',
+        alt: 'Equipment — Comfortable daypack and trail equipment',
+      },
+      {
+        src: '/equi_3.jpeg?v=1',
+        alt: 'Equipment — Mountain weather protection and jacket',
+      },
+      {
+        src: '/equi_4.jpeg?v=1',
+        alt: 'Equipment — Alpine trail accessories and sun protection',
       },
     ],
   },
@@ -178,33 +159,30 @@ export const RETREAT_PAGES: PageData[] = [
     id: 'download',
     name: 'Download',
     navTitle: 'Download',
+    hidden: true,
     pictures: [
       {
         src: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=1400&q=85',
         alt: 'Reading texts, syllabus and papers on wooden desk',
-        caption: 'Retreat overview — Complete program information sheet',
       },
       {
         src: 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1400&q=85',
         alt: 'Monastic library texts and archives',
-        caption: 'Dossier & readings — Printable study notes and syllabus',
       },
       {
         src: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1400&q=85',
         alt: 'Valley overview of Marmora and mountain slopes',
-        caption: 'Topographic notes — Marmora and upper Maira trail information',
       },
       {
         src: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1400&q=85',
         alt: 'Study desk and archive documents',
-        caption: 'Checklists — Gear, travel instructions, and contact details',
       },
     ],
   },
 ];
 
 export const RETREAT_INFO = {
-  title: 'HIKANT',
+  title: 'hiKant',
   dates: 'September 6 – September 9, 2027',
   location: 'Borgata Superiore, Marmora, Val Maira (CN), Italy',
   elevation: '1,580 m a.s.l.',
@@ -219,5 +197,11 @@ export const RETREAT_INFO = {
     travel: 'Contribution to shared travel from Turin to Marmora',
     food: 'Contribution to shared food expenses (bought and prepared together)',
   },
-  contactEmail: 'laura.altoe@gmail.com',
+  contactEmail: 'hikant.seminar@gmail.com',
+  organizers: [
+    'Serena Feloj (University of Pavia)',
+    'Luigi Filieri (Scuola Normale Superiore, Pisa)',
+    'Gabriele Gava (University of Turin)',
+    'João Lemos (University of Turin)',
+  ],
 };

@@ -6,11 +6,11 @@ import { Footer } from './components/Footer';
 import { RETREAT_PAGES, PageData } from './data/retreatData';
 
 import { HomeView } from './pages/HomeView';
-import { ValMairaView } from './pages/ValMairaView';
 import { LocationView } from './pages/LocationView';
 import { AccomodationsView } from './pages/AccomodationsView';
 import { ProgramView } from './pages/ProgramView';
-import { PracticalView } from './pages/PracticalView';
+import { CostsView } from './pages/CostsView';
+import { EquipmentView } from './pages/EquipmentView';
 import { DownloadView } from './pages/DownloadView';
 
 export default function App() {
@@ -22,8 +22,11 @@ export default function App() {
   useEffect(() => {
     const handleHashChange = () => {
       let hash = window.location.hash.replace('#', '');
-      // Handle backward compatibility if someone visits #setting
+      // Handle backward compatibility
       if (hash === 'setting') hash = 'location';
+      if (hash === 'practical') hash = 'costs';
+      if (hash === 'accomodations') hash = 'accommodation';
+      if (hash === 'download') hash = 'home';
 
       if (RETREAT_PAGES.some((p) => p.id === hash)) {
         setActivePageId(hash);
@@ -57,11 +60,11 @@ export default function App() {
       {/* 4. Under the pictures: clean, simple text with no highlights or boxes */}
       <main className="flex-1 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
         {activePageId === 'home' && <HomeView />}
-        {activePageId === 'val-maira' && <ValMairaView />}
         {activePageId === 'location' && <LocationView />}
-        {activePageId === 'accomodations' && <AccomodationsView />}
+        {(activePageId === 'accommodation' || activePageId === 'accomodations') && <AccomodationsView />}
         {activePageId === 'program' && <ProgramView />}
-        {activePageId === 'practical' && <PracticalView />}
+        {activePageId === 'costs' && <CostsView />}
+        {activePageId === 'equipment' && <EquipmentView />}
         {activePageId === 'download' && <DownloadView />}
       </main>
 
