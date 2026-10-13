@@ -19,19 +19,19 @@ export const RETREAT_PAGES: PageData[] = [
     navTitle: 'Home',
     pictures: [
       {
-        src: '/home_scree_mountain.jpg?v=3',
+        src: '/home_scree_mountain.jpg?v=5',
         alt: 'Val Maira alpine mountain landscape',
       },
       {
-        src: '/home_alpine_trail.jpg?v=2',
+        src: '/home_alpine_trail.jpg?v=5',
         alt: 'Percorsi Occitani hiking trail along rocky mountain slopes (IMG_1308)',
       },
       {
-        src: '/home_monastery_library.jpg?v=2',
+        src: '/home_monastery_library.jpg?v=5',
         alt: 'Padre Sergio’s authentic monastic library in Borgata Superiore',
       },
       {
-        src: '/home_marmora_village.jpg?v=2',
+        src: '/home_marmora_village.jpg?v=5',
         alt: 'Borgata Superiore, Marmora church bell tower and valley ridge (IMG_1348)',
       },
     ],
@@ -42,19 +42,19 @@ export const RETREAT_PAGES: PageData[] = [
     navTitle: 'Location',
     pictures: [
       {
-        src: '/Location_1.jpeg?v=1',
+        src: '/Location_1.jpeg?v=5',
         alt: 'Location — Padre Sergio’s former monastery in Borgata Superiore, Marmora',
       },
       {
-        src: '/Location_2.jpeg?v=1',
+        src: '/Location_2.jpeg?v=5',
         alt: 'Location — Monastery indoor and outdoor spaces',
       },
       {
-        src: '/Location_3.jpeg?v=1',
+        src: '/Location_3.jpeg?v=5',
         alt: 'Location — Library and study environment',
       },
       {
-        src: '/Location_4.jpeg?v=1',
+        src: '/Location_4.jpeg?v=5',
         alt: 'Location — Panoramic mountain views from the monastery',
       },
     ],
@@ -65,22 +65,22 @@ export const RETREAT_PAGES: PageData[] = [
     navTitle: 'Accommodation',
     pictures: [
       {
-        src: '/Acco_1.jpg?v=1',
+        src: '/Acco_1.jpg?v=5',
         alt: 'Triple room',
         caption: 'Triple room',
       },
       {
-        src: '/Acco_2.jpeg?v=1',
+        src: '/Acco_2.jpeg?v=5',
         alt: 'Double room',
         caption: 'Double room',
       },
       {
-        src: '/Acco_3.jpeg?v=1',
+        src: '/Acco_3.jpeg?v=5',
         alt: 'Kitchen',
         caption: 'Kitchen',
       },
       {
-        src: '/Acco_4.jpeg?v=2',
+        src: '/Acco_4.jpeg?v=5',
         alt: 'Terrace',
         caption: 'Terrace',
       },
@@ -92,19 +92,19 @@ export const RETREAT_PAGES: PageData[] = [
     navTitle: 'Program',
     pictures: [
       {
-        src: '/Program_1.jpg?v=1',
+        src: '/Program_1.jpg?v=5',
         alt: 'Program — Meeting and departure to Marmora',
       },
       {
-        src: '/Program_2.jpg?v=1',
+        src: '/Program_2.jpg?v=5',
         alt: 'Program — Philosophical reading and discussion sessions',
       },
       {
-        src: '/Program_3.jpeg?v=1',
+        src: '/Program_3.jpeg?v=5',
         alt: 'Program — The alpine hike in Val Maira',
       },
       {
-        src: '/Program_4.jpeg?v=1',
+        src: '/Program_4.jpeg?v=5',
         alt: 'Program — Community, reflection and conclusion',
       },
     ],
@@ -115,19 +115,19 @@ export const RETREAT_PAGES: PageData[] = [
     navTitle: 'Costs',
     pictures: [
       {
-        src: '/Cost_1.jpeg?v=1',
+        src: '/Cost_1.jpeg?v=5',
         alt: 'Costs — Shared journey and transport arrangements',
       },
       {
-        src: '/Cost_2.jpeg?v=1',
+        src: '/Cost_2.jpeg?v=5',
         alt: 'Costs — Shared meals and food preparation',
       },
       {
-        src: '/Cost_3.jpeg?v=1',
+        src: '/Cost_3.jpeg?v=5',
         alt: 'Costs — Accommodation at Padre Sergio’s former monastery',
       },
       {
-        src: '/Cost_4.jpeg?v=1',
+        src: '/Cost_4.jpeg?v=5',
         alt: 'Costs — Association membership and cultural spaces',
       },
     ],
@@ -138,19 +138,19 @@ export const RETREAT_PAGES: PageData[] = [
     navTitle: 'Equipment',
     pictures: [
       {
-        src: '/equi_1.jpeg?v=1',
+        src: '/equi_1.jpeg?v=5',
         alt: 'Equipment — Sturdy mountain hiking footwear',
       },
       {
-        src: '/equi_2.jpeg?v=1',
+        src: '/equi_2.jpeg?v=5',
         alt: 'Equipment — Comfortable daypack and trail equipment',
       },
       {
-        src: '/equi_3.jpeg?v=1',
+        src: '/equi_3.jpeg?v=5',
         alt: 'Equipment — Mountain weather protection and jacket',
       },
       {
-        src: '/equi_4.jpeg?v=1',
+        src: '/equi_4.jpeg?v=5',
         alt: 'Equipment — Alpine trail accessories and sun protection',
       },
     ],
